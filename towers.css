@@ -1,0 +1,36 @@
+ul {
+  -webkit-padding-start: 0;
+  border-top: 10px solid;
+  border-color: black;
+  display: inline-block;
+  list-style: none;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  transform: rotate(180deg);
+}
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+}
+.disk1 {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background-color: mediumaquamarine;
+  margin: 10px auto;
+}
+.disk2 {
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  background-color: lightseagreen;
+  margin: 10px auto;
+}
+.disk3{
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  background-color: teal;
+  margin: 10px auto;
+}
