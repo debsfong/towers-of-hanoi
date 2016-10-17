@@ -35,16 +35,21 @@ class View {
     if (this.firstTower != undefined) {
       //if first tower, make move with second tower and reset first tower
       let secondTower = parseInt($ul.attr('id'));
+      $("ul").removeClass('selected');
       if (!this.game.move(this.firstTower, secondTower)) {
         alert('Invalid Move');
         this.firstTower = undefined;
       } else {
         this.firstTower = undefined;
         this.render();
+        if (this.game.isWon()) {
+          alert('You are so awesome!');
+        }
       }
     } else {
       //else set first tower
       this.firstTower = parseInt($ul.attr('id'));
+      $ul.addClass('selected');
     }
   }
 
@@ -63,9 +68,6 @@ class View {
           $(children[j]).removeClass();
         }
       }
-    }
-    if (this.game.isWon()) {
-      alert('You are so awesome!');
     }
   }
 }
